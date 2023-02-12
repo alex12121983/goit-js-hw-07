@@ -1,7 +1,15 @@
 import { galleryItems } from './gallery-items.js';
+// import * as basicLightbox from 'basiclightbox';
 // Change code below this line
 
 const gallery = document.querySelector('.gallery');
+
+const showImage = (event) => {
+    event.preventDefault();
+    basicLightbox
+    .create(`<img width="90vh" height="90vh" src="${event.target.dataset.source}">`)
+    .show()
+};
 
 gallery.innerHTML = galleryItems.reduce(
     (html, current) => 
@@ -18,3 +26,5 @@ gallery.innerHTML = galleryItems.reduce(
     </div>
     `, ""
     );
+
+    gallery.addEventListener('click', showImage);
