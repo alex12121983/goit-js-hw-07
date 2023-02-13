@@ -6,6 +6,7 @@ const gallery = document.querySelector('.gallery');
 
 const showImage = (event) => {
     event.preventDefault();
+    if( event.target.dataset.source === "" ) return;
     basicLightbox
     .create(`<img width="90vh" height="90vh" src="${event.target.dataset.source}">`)
     .show()
