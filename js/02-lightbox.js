@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
- 
+  
 const gallery = document.querySelector('.gallery');
 
 gallery.innerHTML = galleryItems.reduce(
@@ -12,7 +12,7 @@ gallery.innerHTML = galleryItems.reduce(
     `, ""
     );
 
-    let lightbox = new SimpleLightbox('.gallery a', { 
-      captionsData: "alt",
-      captionDelay: 250,
-    });
+    //  let lightbox = new SimpleLightbox('.gallery a', { 
+    //   captionsData: "alt",
+    //   captionDelay: 250,
+    // });
